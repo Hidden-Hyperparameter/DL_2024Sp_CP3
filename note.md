@@ -4,3 +4,7 @@
 
 ## 2023-4-21 night
 1. Change 1.5 to 0.15 for dataset minibatch discrimination
+
+## 2023-4-22 night
+1. VAE: faulty loss function, variance is $\sigma^2$!
+2. GAN: 

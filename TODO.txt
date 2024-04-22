@@ -1,0 +1,3 @@
+VAE: 改label大小
+FLOW: 改网络结构（加linear）, 超参数
+GAN: 乱改
