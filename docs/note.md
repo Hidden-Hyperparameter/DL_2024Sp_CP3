@@ -58,7 +58,8 @@ class Generator(nn.Module):
 ```
 1. Generator can't have `c5`, otherwise the gradient will disappear. 
 2. The last convolution should have `kernel_size=1`, otherwise it will contain some **patterns**(e.g. 马赛克)
-3. Increasing the convolution channel number may lead to model representation too much, in which cases the model will learn some strange patterns to fool the discriminator. On the other hand, if the channel number is too small, the model will not be able to learn much number patterns, so the variance will be small.
+3. The convolution kernel size shouldn't be too large, otherwise the numbers will be too "thick", like written by a brush.
+4. Increasing the convolution channel number may lead to model representation too much, in which cases the model will learn some strange patterns to fool the discriminator. On the other hand, if the channel number is too small, the model will not be able to learn much number patterns, so the variance will be small.
 
 ### Discriminator
 ```python
@@ -214,6 +215,7 @@ The following image is the training curve. Notice that at the first 7~8 epochs, 
 
 ![](./gan_loss.png)
 
+2. The training process is shown in the folder [folder](../train_gan_image_history/). Notice that the generated images are very bad at the beginning, but they will be improved afterwards.
 
 ## What I have learned
 1. Never tune something by yourself--use packages. For example, don't manually (automatically) adjust learning rate in order to make the training stable. You should believe `Adam`, and let it run for 100 epochs. Maybe the results would be disappointing at first, but they will be improved. (see the images in the `train_gan_image_history` folder). Specifically, avoid this kind of code:
