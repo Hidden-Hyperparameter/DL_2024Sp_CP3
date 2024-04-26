@@ -1,3 +1,7 @@
+# My Notes
+see ![here](./docs/note.md)
+
+# Original README file
 同学们好，以下为Coding Project 3的内容。在CP3中，你将实现四种课上讲过的生成模型。以下为关于本次Coding Project的几点要求：
 
 1. 请按照下发的`<method>.ipynb`中的指示，填写缺失的代码。
